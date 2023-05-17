@@ -9,6 +9,8 @@ option java_outer_classname = "ServiceProto";
 option ruby_package = "DarkDispatcher::Api::ManagementService::V1";
 option csharp_namespace = "DarkDispatcher.Api.ManagementService.V1";
 
+import "darkdispatcher/api/managementservice/v1/request_response.proto";
+
 // ManagementService API defines how Dark Dispatcher SDKs and other clients interact with the Dark Dispatcher server.
 // to perform administrative functions like registering a project or a feature flag.
 service ManagementService {
