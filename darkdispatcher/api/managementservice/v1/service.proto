@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package darkdispatcher.api.managementservice.v1;
+
+option go_package = "go.darkdispatcher.io/api/managementservice/v1;managementservice";
+option java_package = "io.darkdispatcher.api.managementservice.v1";
+option java_multiple_files = true;
+option java_outer_classname = "ServiceProto";
+option ruby_package = "DarkDispatcher::Api::ManagementService::V1";
+option csharp_namespace = "DarkDispatcher.Api.ManagementService.V1";
+
+// ManagementService API defines how Dark Dispatcher SDKs and other clients interact with the Dark Dispatcher server.
+// to perform administrative functions like registering a project or a feature flag.
+service ManagementService {
+  // ListOrganizations returns a list of organizations
+  rpc ListOrganizations(ListOrganizationsRequest) returns (ListOrganizationsResponse);
+}

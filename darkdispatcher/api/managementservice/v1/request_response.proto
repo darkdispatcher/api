@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package darkdispatcher.api.managementservice.v1;
+
+option go_package = "go.darkdispatcher.io/api/managementservice/v1;managementservice";
+option java_package = "io.darkdispatcher.api.managementservice.v1";
+option java_multiple_files = true;
+option java_outer_classname = "RequestResponseProto";
+option ruby_package = "DarkDispatcher::Api::ManagementService::V1";
+option csharp_namespace = "DarkDispatcher.Api.ManagementService.V1";
+
+import "darkdispatcher/api/accounts/v1/message.proto";
+
+message ListOrganizationsRequest {
+  // How many to return at once.
+  int32 maximum_page_size = 1;
+  // Token to get the next page of results.
+  bytes next_page_token = 2;
+}
+
+message ListOrganizationsResponse {
+  repeated Organization organizations = 1;
+}
