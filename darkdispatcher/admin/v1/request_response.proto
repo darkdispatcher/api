@@ -11,13 +11,13 @@ option csharp_namespace = "DarkDispatcher.Admin.V1";
 
 import "darkdispatcher/admin/v1/accounts.proto";
 
+// request message for getting list of organizations
 message ListOrganizationsRequest {
   // How many to return at once.
   int32 maximum_page_size = 1;
-  // Token to get the next page of results.
-  bytes next_page_token = 2;
 }
 
 message ListOrganizationsResponse {
+  // List of organizations.
   repeated darkdispatcher.admin.v1.Organization organizations = 1;
 }

@@ -6,8 +6,8 @@ option go_package = "go.darkdispatcher.io/admin/v1;admin";
 option java_package = "io.darkdispatcher.admin.v1";
 option java_multiple_files = true;
 option java_outer_classname = "ServiceProto";
-option ruby_package = "DarkDispatcher::Api::Admin::V1";
-option csharp_namespace = "DarkDispatcher.Api.Admin.V1";
+option ruby_package = "DarkDispatcher::Admin::V1";
+option csharp_namespace = "DarkDispatcher.Admin.V1";
 
 import "google/api/annotations.proto";
 import "darkdispatcher/admin/v1/request_response.proto";
@@ -15,7 +15,7 @@ import "darkdispatcher/admin/v1/request_response.proto";
 // ManagementService API defines how Dark Dispatcher SDKs and other clients interact with the Dark Dispatcher server.
 // to perform administrative functions like registering a project or a feature flag.
 service ManagementService {
-  // ListOrganizations returns a list of organizations
+  // returns a list of organizations
   rpc ListOrganizations(ListOrganizationsRequest) returns (ListOrganizationsResponse) {
     option (google.api.http) = {
       get: "/api/organizations"
