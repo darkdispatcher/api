@@ -21,4 +21,12 @@ service ManagementService {
       get: "/api/organizations"
     };
   };
+
+  // creates a new Product in a specified Organization
+  // identified by the organizationId parameter, which can be obtained from the List Organizations endpoint.
+  rpc CreateProject(CreateProjectRequest) returns (CreateProjectResponse) {
+    option (google.api.http) = {
+      post: "/api/organizations/{organization_id}/projects"
+    };
+  };
 }

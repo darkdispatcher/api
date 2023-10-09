@@ -10,6 +10,7 @@ option ruby_package = "DarkDispatcher::Admin::V1";
 option csharp_namespace = "DarkDispatcher.Admin.V1";
 
 import "darkdispatcher/admin/v1/accounts.proto";
+import "darkdispatcher/admin/v1/projects.proto";
 
 // request message for getting list of organizations
 message ListOrganizationsRequest {
@@ -20,4 +21,14 @@ message ListOrganizationsRequest {
 message ListOrganizationsResponse {
   // List of organizations.
   repeated darkdispatcher.admin.v1.Organization organizations = 1;
+}
+
+message CreateProjectRequest {
+  // Organization id.
+  string organization_id = 1;
+}
+
+message CreateProjectResponse {
+  // Project created.
+  darkdispatcher.admin.v1.Project project = 1;
 }

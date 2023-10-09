@@ -12,14 +12,20 @@ option csharp_namespace = "DarkDispatcher.Admin.V1";
 import "google/protobuf/timestamp.proto";
 
 message Organization {
+  // Organization Id
   string id = 1;
+  // Name of Organization
   string name = 2;
 }
 
 message User {
+  // User Id
   string id = 1;
+  // User email address
   string email = 2;
+  // First Name
   string first_name = 3;
+  // Last Name
   string last_name = 4;
 }
 

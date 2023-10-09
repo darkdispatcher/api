@@ -1,0 +1,21 @@
+﻿syntax = "proto3";
+
+package darkdispatcher.admin.v1;
+
+option go_package = "go.darkdispatcher.io/admin/v1;admin";
+option java_package = "io.darkdispatcher.admin.v1";
+option java_multiple_files = true;
+option java_outer_classname = "ProjectsProto";
+option ruby_package = "DarkDispatcher::Admin::V1";
+option csharp_namespace = "DarkDispatcher.Admin.V1";
+
+message Project {
+  // Organization id
+  string organization_id = 1;
+  // Project id
+  string id = 2;
+  // Name of project.
+  string name = 3;
+  // Description of project.
+  string description = 4;
+}
