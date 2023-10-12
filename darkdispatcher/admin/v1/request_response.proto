@@ -26,6 +26,10 @@ message ListOrganizationsResponse {
 message CreateProjectRequest {
   // Organization id.
   string organization_id = 1;
+  // Name of the project.
+  string name = 2;
+  // Description of the project
+  optional string description = 3;
 }
 
 message CreateProjectResponse {
