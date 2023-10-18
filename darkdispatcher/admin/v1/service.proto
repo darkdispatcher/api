@@ -29,4 +29,11 @@ service ManagementService {
       post: "/api/organizations/{organization_id}/projects"
     };
   };
+
+  // returns the list of the products that belongs to the user and organization.
+  rpc ListProjects(ListProjectsRequest) returns (ListProjectsResponse) {
+    option (google.api.http) = {
+      get: "/api/organizations/{organization_id}/projects"
+    };
+  };
 }

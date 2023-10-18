@@ -19,3 +19,7 @@ message Project {
   // Description of project.
   string description = 4;
 }
+
+message Environment {
+
+}
