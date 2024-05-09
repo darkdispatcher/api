@@ -18,8 +18,18 @@ message Project {
   string name = 3;
   // Description of project.
   string description = 4;
+  // Environments of project.
+  repeated Environment environments = 5;
 }
 
 message Environment {
+  // Environment id.
+  string id = 1;
+  // Name of environment.
+  string name = 2;
+  // Color of environment.
+  string color = 3;
+  // Description of environment.
+  string description = 4;
 
 }
