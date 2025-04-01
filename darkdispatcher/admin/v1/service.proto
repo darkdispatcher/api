@@ -9,31 +9,17 @@ option java_outer_classname = "ServiceProto";
 option ruby_package = "DarkDispatcher::Admin::V1";
 option csharp_namespace = "DarkDispatcher.Admin.V1";
 
-import "google/api/annotations.proto";
 import "darkdispatcher/admin/v1/request_response.proto";
 
 // ManagementService API defines how Dark Dispatcher SDKs and other clients interact with the Dark Dispatcher server.
 // to perform administrative functions like registering a project or a feature flag.
 service ManagementService {
   // returns a list of organizations
-  rpc ListOrganizations(ListOrganizationsRequest) returns (ListOrganizationsResponse) {
-    option (google.api.http) = {
-      get: "/api/organizations"
-    };
-  };
-
+  rpc ListOrganizations(ListOrganizationsRequest) returns (ListOrganizationsResponse);
   // creates a new Product in a specified Organization
   // identified by the organizationId parameter, which can be obtained from the List Organizations endpoint.
-  rpc CreateProject(CreateProjectRequest) returns (CreateProjectResponse) {
-    option (google.api.http) = {
-      post: "/api/organizations/{organization_id}/projects"
-    };
-  };
+  rpc CreateProject(CreateProjectRequest) returns (CreateProjectResponse);
 
   // returns the list of the products that belongs to the user and organization.
-  rpc ListProjects(ListProjectsRequest) returns (ListProjectsResponse) {
-    option (google.api.http) = {
-      get: "/api/organizations/{organization_id}/projects"
-    };
-  };
+  rpc ListProjects(ListProjectsRequest) returns (ListProjectsResponse);
 }
